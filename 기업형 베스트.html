@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>남성의류 파는 사이트</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .header {
+        height: 145px;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid #999;
+    }
+    .header .login{
+      float: right;
+      font-size: 20px;
+      margin: 15px;
+    }
+    
+    
+    
+    
+    
+    .header_logo img:hover{
+      width:100px;
+      height:100px;
+      transform:scale(1.5);
+      transition: transform.5s;
+    }
+    
+    .product-list img:hover{
+      width:200px;
+      height:300px;
+      transform:scale(1.5);
+      transition: transform.5s;
+    }
+    
+    .sale-list img:hover{
+      width:150px;
+      height:200px;
+      transform:scale(1.5);
+      transition: transform.5s;
+    }
+    
+    
+    img:hover{
+      width:300px;
+      height:300px;
+      transform:scale(1.5);
+      transition: transform.5s;
+    }
+    
+    .header_logo img {
+      border-radius: 10px;
+      float: left;
+      margin-left: 500px;
+      list-style-image: none;
+    }
+    .header_logo h1 {
+        font: bold 40px 'arial';
+        padding-top: 14px;
+        letter-spacing: 2px;
+        margin-right: 600px ;
+    }
+    
+    .header_logo p {
+        font: bold 12px 'arial';
+        letter-spacing: 2px;
+        margin-top: -1px;
+        margin-right: 600px;
+    } 
+    
+    .header_gnb ul {
+        margin-top: 39px;
+    }
+    .header_gnb ul li{
+        display: inline-block;
+    }
+    
+    .header_gnb ul li a {
+        display: block;
+        font: bold 14px 'arial';
+        color: #999;
+        margin: 0px 16px;
+        letter-spacing: 1px;
+    }
+    .sp_h1 {
+        width: 20px;
+        height: 20px;
+    }
+    
+    li{
+        list-style-type: none;
+      }
+      
+     
+    
+      
+      
+      .controller span{
+        position:absolute;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        border-radius: 50%;
+        padding: 10px 20px;
+        top: 50%;
+        font-size: 1.3em;
+        cursor: pointer;
+      }
+      
+      /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+      .controller span:hover{
+        background-color: rgba(128, 128, 128, 0.11);
+      }
+      
+      .prev{
+        left: 10px;
+      }
+      
+      /* 이전 화살표에 마우스 커서가 올라가 있을때 
+      이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+      .prev:hover{
+        transform: translateX(-10px);
+      }
+      
+      .next{
+        right: 10px;
+      }
+      
+      /* 다음 화살표에 마우스 커서가 올라가 있을때 
+      이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+      .next:hover{
+        transform: translateX(10px);
+      }
+     
+    
+    
+    
+    
+    
+      .products h3{
+        font-size: 24px;
+        color: #545454;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .img1 {
+        border-radius: 20px;
+      }
+      .product-list{
+        width: 900px;
+        padding-left: 85px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .product{
+        width: 250px;
+        text-align: center;
+        display: block;
+        color: #545454;
+        text-decoration: none;
+        float: left;
+        margin-left:10px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+      }
+      .product1{
+        width: 250px;
+        text-align: center;
+        display: block;
+        color: #545454;
+        text-decoration: none;
+        float: left;
+        margin-left:10px;
+        margin-right: 10px;
+        margin-bottom: 80px;
+      }
+      .product2{
+        width: 250px;
+        text-align: center;
+        display: block;
+        color: #545454;
+        text-decoration: none;
+        float: left;
+        margin-left:10px;
+        margin-right: 10px;
+        margin-bottom: 150px;
+      }
+      
+      .product-name{
+        margin-top: 20px;
+        margin-bottom: 4px;
+        font-size: 20px;
+      }
+      .product-price {
+        font-weight: bold;
+      }
+    
+    
+    h4 {
+      font-size: 40px;
+      color: blue;
+      font-weight: bold;
+      padding: 30px;
+      text-align: center;
+    }
+
+      h2{
+        font-size: 50px;
+        color: #fd0000;
+        font-weight: bold;
+        padding-top: 40px;
+        padding-bottom: 30px  ;
+        text-align: center;
+      }
+      .sale-price {
+        font-weight: bold;
+      }
+    
+      .sale img {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+      }
+    
+      .sale-list{
+        width: 1100px;
+        padding-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .sale{
+        width: 250px;
+        text-align: center;
+        text-decoration: none;
+        float: left;
+        margin-left:10px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+      }
+      .sale1{
+        width: 250px;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        float: left;
+        margin-left:10px;
+        margin-right: 10px;
+        margin-bottom: 80px;
+      }
+      .sale2{
+        width: 250px;
+        text-align: center;
+        display: block;
+        color: #7c7b7b;
+        text-decoration: none;
+        float: left;
+        margin-left:10px;
+        margin-right: 10px;
+        margin-bottom: 150px;
+      }
+      
+      .sale-name{
+        margin-top: 20px;
+        margin-bottom: 4px;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+      
+    
+    
+    
+    
+    
+      .clearfix{
+        clear: both;
+      }
+    
+    
+      footer {
+        width: 100%;
+        height: 110px; /* 내용물에 따라 알맞는 값 설정 */
+        bottom: 0px;
+        position: absolute;
+      }
+    
+      section {
+        padding-bottom: 110px; /* footer의 height값과 동일 */
+        background-color: #ffffff;
+      }
+    
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      #wrap {
+        position: relative;
+        width: 100%; 
+        background-color: #f2f2f2;
+      }
+      
+      
+      footer {
+        width: 100%;
+        height: 90px;
+        bottom: 0px;
+        position: absolute;
+        border-top: 1px solid #c4c4c4;
+        padding-top: 15px;
+        color: #808080;
+        font-size: 11px;
+      }
+      
+      footer a {
+        display: inline-block;
+        margin: 0 20px 10px 20px;
+        color: #808080; font-size: 11px;
+      }
+      
+      footer a:visited {
+        color: #808080;
+      }
+      
+      footer p {
+        margin-top: 0; margin-bottom: 0;   
+      }
+      
+      footer p span {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    
+    
+    
+    
+    
+    
+    
+    .gg{
+      float: right;
+      display: block;
+      overflow: hidden;
+      width: 300px;
+      height: 700px;
+      background-color: rgb(117, 117, 117);
+      color: #fff;
+      transition: all 0.5s ease;
+      border-radius: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-left: 1600px;
+      position: fixed;
+      top: 150px;
+    }
+    
+    
+    
+    
+    .menu {
+      float: left;
+      display: block;
+      overflow: hidden;
+      width: 200px;
+      height: 600px;
+      background-color: #000;
+      color: #fff;
+      transition: all 0.5s ease;
+      border-radius: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 150px;
+    }
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu a, .menu > label {
+      display: block;
+      height: 25px;
+      padding: 8px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .menu a:hover {
+      color: #000;
+    }
+    .menu ul li:hover, .menu > label:hover {
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+    }
+    .menu div {
+      position: absolute;
+      left: 50px;
+      line-height: 1.5;
+      font-size: 1em;
+      font-family: 'Noto Sans KR';
+      padding: 0 0 0 20px;
+    }
+    .menu .item {
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+    #expand-menu {
+      display: none;
+    }
+    #expand-menu:checked ~ ul {
+      display: block;
+      height: auto;
+    }
+    
+    .menu ::before {
+      font-family: 'Material Icons';
+      font-size: 1.5em;
+      float: left;
+      clear: left;
+    }
+    
+    
+    
+    
+    .menu {
+      display: block;
+      overflow: hidden;
+      width: 200px;
+      height: 600px;
+      background-color: #000;
+      color: #fff;
+      transition: all 0.5s ease;
+      border-radius: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 150px;
+    }
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu a, .menu > label {
+      display: block;
+      height: 25px;
+      padding: 8px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .menu a:hover {
+      color: #000;
+    }
+    .menu ul li:hover, .menu > label:hover {
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+    }
+    .menu div {
+      position: absolute;
+      left: 50px;
+      line-height: 1.5;
+      font-size: 1em;
+      font-family: 'Noto Sans KR';
+      padding: 0 0 0 20px;
+    }
+    .menu .item {
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+    #expand-menu {
+      display: none;
+    }
+    #expand-menu:checked ~ ul {
+      display: block;
+      height: auto;
+    }
+    
+    .menu ::before {
+      font-family: 'Material Icons';
+      font-size: 1.5em;
+      float: left;
+      clear: left;
+    }
+    .menu label::before{ content: '\e5d2'; }
+    .menu li:nth-child(1) a::before{ content: '\f02e'; }
+    .menu li:nth-child(2) a::before{ content: '\e8d6'; }
+    .menu li:nth-child(3) a::before{ content: '\e88a'; }
+    .menu li:nth-child(4) a::before{ content: '\e8cc'; }
+    .menu li:nth-child(5) a::before{ content: '\e87d'; }
+    .menu li:nth-child(6) a::before{ content: '\e8b8'; }
+    
+    @media screen and (max-width:1023px) {
+      .menu {
+          width: 60px;
+      }
+    }
+    @media screen and (max-width:560px) {
+      .menu #expand-menu:not(:checked) ~ ul {
+          display: none;
+      }
+    }
+    
+    @media (max-width:1730px){ 
+      * {
+        display: none;
+        
+        
+      }
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <a href="#">
+              <img src="logo.jpg" alt="">
+              <a href=""><p class="login">회원 가입</p></a>
+              <a href=""><p class="login">로그인</p></a>
+              <h1>남성옷판</h1>
+                
+                <p>특이한 옷를 팔고 가장-싸게 파는 유니크 사이트(FEAT.혼자만의 생각일수도)</p>
+            </a>
+        </div> 
+        <div class="header_gnb">
+            <ul>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">신상</a></li>
+                <li><a href="#">바지</a></li>
+                <li><a href="#">상의</a></li>
+                <li><a href="#">외투</a></li>
+                <li><a href="#">신발</a></li>
+                <li><a href="#">시계</a></li>
+                <li><a href="#">사이트 소개</a></li>
+                <li><a href="#">질문 게시판</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="products">
+      <div class="menu">
+        <label for="expand-menu"><div>메뉴</div></label><input type="checkbox" id="expand-menu" name="expand-menu">
+        <ul>
+            <li><a href="#" class="item"><div>프로필</div></a></li>
+            <li><a href="#" class="item"><div>총구매량</div></a></li>
+            <li><a href="#" class="item"><div>메모지</div></a></li>
+            <li><a href="#" class="item"><div>구매내역</div></a></li>
+            <li><a href="#" class="item"><div>추천목록</div></a></li>
+            <li><a href="#" class="item"><div>설정</div></a></li>
+        </ul>
+      </div>   
+        <h4>베스트 상품</h4>
+        <div class="product-list">
+          <a href="" class="product">
+            <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpePv4NkhN5aMDLl8Yljkn8QMymeXyFkPCA&usqp=CAU" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          
+          <a href="" class="product">
+            <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJV9d3eBPYm6dngQ576ts-IlE8bskOYqRfiA&usqp=CAU" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">89,000</div>
+          </a>
+          
+          <a href="" class="product1">
+            <img class="img1" src="https://m.nthelook.com/web/product/big/202110/ad0aa73c66856c864810c5caa03479c6.jpg" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">69,000</div>
+          </a>
+          
+          <a href="" class="product">
+            <img class="img1" src="https://image.musinsa.com/mfile_s01/_shopstaff/view.staff_6369da0f2caa0.jpg" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          
+          <a href="" class="product">
+            <img class="img1" src="https://sitem.ssgcdn.com/41/41/46/item/1000229464141_i1_550.jpg" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          
+          <a href="" class="product2">
+            <img class="img1" src="https://m.nthelook.com/web/product/big/202109/4b0bc7bec6942f7415a545c0b030266e.jpg" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          
+          <a href="" class="product">
+            <img class="img1" src="http://www.mdjournal.kr/news/photo/201810/30598_14142_1251.jpg" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          
+          <a href="" class="product">
+            <img class="img1" src="http://gdimg.gmarket.co.kr/394060112/still/280" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          
+          <a href="" class="product">
+            <img class="img1" src="http://m.blackzone.kr/web/product/medium/202010/ba0fb4bd7c5b058243a1370aac7c2382.jpg" width="200" height="300">
+            <div class="product-name">
+              옷
+            </div>
+            <div class="product-price">49,000</div>
+          </a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+     <div id='wrap'>
+    	<section>
+        <div class="menu">
+          <label for="expand-menu"><div>메뉴</div></label><input type="checkbox" id="expand-menu" name="expand-menu">
+          <ul>
+              <li><a href="#" class="item"><div>프로필</div></a></li>
+              <li><a href="#" class="item"><div>총구매량</div></a></li>
+              <li><a href="#" class="item"><div>홈으로</div></a></li>
+              <li><a href="#" class="item"><div>구매내역</div></a></li>
+              <li><a href="#" class="item"><div>추천목록</div></a></li>
+              <li><a href="#" class="item"><div>설정</div></a></li>
+          </ul>
+        </div>
+
+        <div class="gg">
+          광고 배너판
+        </div>
+        <h2>베스트상품 할인20%</h2>
+        <div class="sale-list">
+          <a href="" class="sale">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpePv4NkhN5aMDLl8Yljkn8QMymeXyFkPCA&usqp=CAU" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJV9d3eBPYm6dngQ576ts-IlE8bskOYqRfiA&usqp=CAU" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">89,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="https://m.nthelook.com/web/product/big/202110/ad0aa73c66856c864810c5caa03479c6.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">69,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="https://image.musinsa.com/mfile_s01/_shopstaff/view.staff_6369da0f2caa0.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="https://sitem.ssgcdn.com/41/41/46/item/1000229464141_i1_550.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="https://m.nthelook.com/web/product/big/202109/4b0bc7bec6942f7415a545c0b030266e.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="http://www.mdjournal.kr/news/photo/201810/30598_14142_1251.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="http://gdimg.gmarket.co.kr/394060112/still/280" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+          
+          <a href="" class="sale">
+            <img src="http://m.blackzone.kr/web/product/medium/202010/ba0fb4bd7c5b058243a1370aac7c2382.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+
+          <a href="" class="sale">
+            <img src="http://m.blackzone.kr/web/product/medium/202010/ba0fb4bd7c5b058243a1370aac7c2382.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+
+          <a href="" class="sale">
+            <img src="http://m.blackzone.kr/web/product/medium/202010/ba0fb4bd7c5b058243a1370aac7c2382.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+
+          <a href="" class="sale">
+            <img src="http://m.blackzone.kr/web/product/medium/202010/ba0fb4bd7c5b058243a1370aac7c2382.jpg" width="150" height="200">
+            <div class="sale-name">
+              옷
+            </div>
+            <div class="sale-price">49,000</div>
+          </a>
+
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+        </section>
+        <div id='wrap'>
+        <footer>
+          <nav>
+              <a href='https://mail.google.com/mail/u/0/?ogbl#inbox?compose=new' target='_blank'>Blog</a> |
+              <a href='https://github.com/qufdlskan' target='_blank'>Github</a>
+          </nav>
+          <p>
+              <span>저자 : qufdlskan</span><br/>
+              <span>이메일 : qufdlskan3015@gmail.com</span><br/>
+              <span>Copyright 2020. cocoder. All Rights Reserved.</span>
+          </p>
+      </footer>
+    </div>
+     
+</body>
+</html>
+
